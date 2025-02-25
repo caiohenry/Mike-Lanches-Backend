@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import br.com.mike_lanches.api.apps.user.models.UserModel;
 
 
-// Create repository - User
+// Create repository - user
 @Repository
 public interface UserRepository extends CrudRepository<UserModel, Long>{
 

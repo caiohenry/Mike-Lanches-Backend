@@ -1,0 +1,12 @@
+[
+    {
+        "user_name": "Admin",
+        "user_email": "admin@mikelanches.com",
+        "user_password": "$2a$10$wa3qHq15Uw.aneUkrSkAFufClscQwnN6iqnaTl6E4tEaLqjEHWs5W",
+        "user_phone": "(88) 99920-0000",
+        "user_status": true,
+        "user_removed_date": "2025-01-01",
+        "user_date_joined": "2025-01-01",
+        "user_is_staff": true
+    }
+]

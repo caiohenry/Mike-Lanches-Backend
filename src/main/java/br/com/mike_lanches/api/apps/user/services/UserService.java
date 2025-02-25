@@ -51,7 +51,7 @@ public class UserService {
         }
 
         // Fetch paginated data from the repository
-        Page<UserModel> userPage = userRepository.findAll(PageRequest.of(page, 10));
+        Page<UserModel> userPage = userRepository.findAll(PageRequest.of(page - 1, 10));
 
         // List dto pages
         List<UserListDTO> user = new ArrayList<>();

@@ -17,7 +17,7 @@ public class ImageController {
 
     private final String UPLOAD_DIR = "./uploads/";
 
-    @GetMapping("/{imageName}")
+    @GetMapping("/image/{imageName}")
     public ResponseEntity<UrlResource> getImage(@PathVariable String imageName) {
         try {
             
