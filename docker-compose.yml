@@ -1,0 +1,32 @@
+services:
+
+  database:
+    container_name: database
+    image: postgres:16
+    env_file: .env.local
+    ports:
+      - "5431:5432"
+    environment:
+      - POSTGRES_DB=mikelanches
+      - POSTGRES_USER=mikelanches
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    networks:
+      - network-mikelanches
+
+  app:
+    container_name: app
+    build: .
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    depends_on:
+      - database
+    env_file: .env.local
+    networks:
+      - network-mikelanches
+
+networks:
+  network-mikelanches:
+    driver: bridge
